@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable jsx-a11y/alt-text */
 import type { NextPage } from "next";
 import {Header} from "../components/header";
@@ -106,6 +107,26 @@ const Home: NextPage = () => {
       
       </>
     );
+=======
+import Modal from "@components/Modal";
+import type { NextPage } from "next";
+import { useState } from "react";
+
+const Home: NextPage = () => {
+  const [isopen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button className="" onClick={() => setIsOpen(true)}>
+        hello
+      </button>
+
+      <Modal open={isopen} onClose={() => setIsOpen(false)}>
+        <div>hello</div>
+      </Modal>
+    </div>
+  );
+>>>>>>> dd6e45f4f9c5fffd41d0003224f57a1bd6ea3db9
 };
 
 export default Home;
